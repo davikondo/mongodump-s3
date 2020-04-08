@@ -2,7 +2,7 @@
 
 OPTIONS=`python /usr/local/bin/mongouri`
 BACKUP_NAME="$(date -u +%Y-%m-%d_%H-%M-%S)_UTC.gz"
-S3_BUCKET="$(date -u +%Y-%m-%d)"
+S3_PATH="$(date -u +%Y-%m-%d)"
 
 # Run backup
 mongodump ${OPTIONS} -o /backup/dump
